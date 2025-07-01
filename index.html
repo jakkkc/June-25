@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>June 2025 Digital Report | Hunters Paradise</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-dark: #5d3721;
+            --primary-accent: #a95631;
+            --secondary-brown: #87543b;
+            --sand: #e8d9c9;
+            --ivory: #f8f4ef;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--ivory);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-brown) 100%);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .logo-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 15px;
+            margin-bottom: 15px;
+        }
+        
+        .logo-text {
+            font-size: 32px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-top: 15px;
+        }
+        
+        .logo-text span {
+            font-weight: 600;
+        }
+        
+        .report-title {
+            font-size: 24px;
+            font-weight: 300;
+            margin-top: 15px;
+            letter-spacing: 0.5px;
+        }
+        
+        .report-subtitle {
+            font-size: 16px;
+            font-weight: 300;
+            margin-top: 10px;
+            opacity: 0.9;
+            padding: 0 15px;
+        }
+        
+        .platform-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        
+        .platform-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--sand);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            color: var(--primary-dark);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid var(--primary-accent);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(121, 69, 43, 0.1);
+        }
+        
+        .section-icon {
+            width: 45px;
+            height: 45px;
+            background: var(--sand);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            color: var(--primary-accent);
+            font-size: 20px;
+        }
+        
+        .section-title {
+            font-size: 20px;
+            color: var(--primary-accent);
+            font-weight: 600;
+        }
+        
+        .branches {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .branch-card {
+            padding: 20px;
+            border-radius: 8px;
+            background: var(--ivory);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .branch-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--primary-accent);
+        }
+        
+        .branch-card h3 {
+            color: var(--secondary-brown);
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px dashed rgba(121, 69, 43, 0.2);
+            font-size: 18px;
+        }
+        
+        .insights {
+            margin: 15px 0;
+        }
+        
+        .insight {
+            display: flex;
+            margin-bottom: 15px;
+            padding: 12px;
+            border-radius: 8px;
+            background: rgba(169, 86, 49, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .insight:hover {
+            background: rgba(169, 86, 49, 0.1);
+            transform: translateX(3px);
+        }
+        
+        .insight-icon {
+            min-width: 36px;
+            height: 36px;
+            background: var(--primary-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            color: white;
+            font-size: 14px;
+        }
+        
+        .insight-content h4 {
+            color: var(--primary-dark);
+            margin-bottom: 6px;
+            font-size: 16px;
+        }
+        
+        .insight-content p {
+            font-size: 14px;
+        }
+        
+        .highlight {
+            background: var(--sand);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 25px 0;
+            border-left: 4px solid var(--secondary-brown);
+        }
+        
+        .highlight h3 {
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+            font-size: 18px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .stat-card {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(121, 69, 43, 0.1);
+        }
+        
+        .stat-card i {
+            font-size: 28px;
+            color: var(--primary-accent);
+            margin-bottom: 10px;
+        }
+        
+        .stat-value {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary-dark);
+            margin: 8px 0;
+        }
+        
+        .stat-label {
+            color: var(--secondary-brown);
+            font-size: 14px;
+        }
+        
+        .trend-up {
+            color: #2e7d32;
+            font-weight: 600;
+        }
+        
+        .trend-down {
+            color: #c62828;
+            font-weight: 600;
+        }
+        
+        .initiatives-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin: 25px 0;
+        }
+        
+        .initiative-card {
+            background: rgba(232, 217, 201, 0.3);
+            border-radius: 8px;
+            padding: 20px;
+            border-left: 4px solid var(--secondary-brown);
+            transition: all 0.3s ease;
+        }
+        
+        .initiative-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .initiative-card h3 {
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+        }
+        
+        .initiative-card h3 i {
+            margin-right: 8px;
+            color: var(--primary-accent);
+            font-size: 18px;
+        }
+        
+        .progress-bar {
+            height: 8px;
+            background: rgba(121, 69, 43, 0.1);
+            border-radius: 4px;
+            margin: 12px 0;
+            overflow: hidden;
+        }
+        
+        .progress {
+            height: 100%;
+            background: var(--secondary-brown);
+            border-radius: 4px;
+            transition: width 0.5s ease;
+        }
+        
+        .progress-100 { width: 100%; }
+        .progress-75 { width: 75%; }
+        .progress-50 { width: 50%; }
+        .progress-25 { width: 25%; }
+        
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 8px;
+            font-size: 13px;
+            color: var(--primary-dark);
+        }
+        
+        .data-benefits {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .data-benefit-card {
+            flex: 1;
+            min-width: 250px;
+            background: rgba(121, 69, 43, 0.05);
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+        .data-benefit-card h4 {
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .data-benefit-card h4 i {
+            margin-right: 8px;
+            color: var(--primary-accent);
+        }
+        
+        .challenge-card {
+            background: rgba(183, 101, 66, 0.08);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid var(--primary-accent);
+            position: relative;
+        }
+        
+        .challenge-card h4 {
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .challenge-card h4 i {
+            margin-right: 10px;
+            color: var(--secondary-brown);
+        }
+        
+        .solution-highlight {
+            background: rgba(121, 69, 43, 0.05);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            border-left: 3px solid var(--primary-dark);
+        }
+        
+        .solution-highlight h5 {
+            color: var(--secondary-brown);
+            margin-bottom: 8px;
+        }
+        
+        .timeline-container {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+        }
+        
+        .timeline-container .progress-bar {
+            flex-grow: 1;
+            margin: 0 15px;
+        }
+        
+        .timeline-container .progress-label {
+            font-size: 14px;
+            color: var(--primary-dark);
+            min-width: 80px;
+        }
+        
+        .platform-performance {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .platform-performance-item {
+            flex: 1;
+            min-width: 200px;
+            padding: 15px;
+            background: rgba(232, 217, 201, 0.3);
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .platform-performance-item i {
+            font-size: 24px;
+            color: var(--primary-accent);
+            margin-bottom: 10px;
+        }
+        
+        .special-event {
+            background: linear-gradient(135deg, rgba(93, 55, 33, 0.1) 0%, rgba(135, 84, 59, 0.1) 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 1px dashed var(--primary-accent);
+            text-align: center;
+        }
+        
+        .special-event i {
+            font-size: 28px;
+            color: var(--primary-accent);
+            margin-bottom: 15px;
+        }
+        
+        .thank-you {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-brown) 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .team-member {
+            display: flex;
+            align-items: center;
+            background: rgba(232, 217, 201, 0.5);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        
+        .team-member img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+            border: 2px solid var(--primary-accent);
+        }
+        
+        footer {
+            background: var(--primary-dark);
+            color: var(--sand);
+            padding: 25px 0;
+            text-align: center;
+            margin-top: 30px;
+            border-top: 4px solid var(--primary-accent);
+            position: relative;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .prepared-by {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        
+        .role {
+            font-style: italic;
+            opacity: 0.8;
+            font-size: 14px;
+        }
+        
+        .logo-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 25px 0 10px 0;
+        }
+        
+        .main-logo {
+            max-width: 120px;
+            height: auto;
+            display: block;
+        }
+        
+        @media (min-width: 768px) {
+            .branches {
+                flex-direction: row;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+            
+            .initiatives-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <div class="logo-text">
+                    HUNTERS <span>PARADISE</span>
+                </div>
+            </div>
+            <div class="report-title">Digital Marketing Performance Report</div>
+            <div class="report-subtitle">June 2025 Analysis | Jackson Munene</div>
+            
+            <div class="platform-icons">
+                <div class="platform-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <div class="platform-icon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <div class="platform-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+                <div class="platform-icon">
+                    <i class="fab fa-tiktok"></i>
+                </div>
+                <div class="platform-icon">
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </header>
+        
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h2 class="section-title">June Highlights & Acknowledgements</h2>
+            </div>
+            
+            <div class="special-event">
+                <i class="fas fa-calendar-star"></i>
+                <h3>June Holidays & Team Events</h3>
+                <p>June featured important holidays including <strong>Madaraka Day (June 1)</strong> and <strong>Father's Day (June 16)</strong>.</p>
+                <p>A special thanks to management for allowing all men to participate in a soccer match on Father's Day. This initiative:</p>
+                <ul style="margin: 15px 0; text-align: left;">
+                    <li>Fostered team bonding and camaraderie</li>
+                    <li>Provided much-needed relaxation and stress relief</li>
+                    <li>Created a positive atmosphere that enhanced creativity</li>
+                    <li>Strengthened relationships across departments</li>
+                </ul>
+            </div>
+            
+            <div class="team-member">
+                <div style="background-color: #87543b; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                    <i class="fas fa-user" style="color: white; font-size: 24px;"></i>
+                </div>
+                <div>
+                    <h3>Team Restructuring</h3>
+                    <p>This month I was moved from the Sales Department to work under <strong>Corretta</strong>, who has provided exceptional creative direction and content ideas. Her contributions have significantly enhanced our social media quality and engagement.</p>
+                </div>
+            </div>
+            
+            <div class="highlight">
+                <h3>Resource Allocation</h3>
+                <p>We received <strong>KES 39,000</strong> on June 27 to support our digital marketing efforts. This funding will be used for:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Metricool monthly subscription for social media management</li>
+                    <li>Adobe Creative Suite for enhanced content creation</li>
+                    <li>Strategic boosting of high-performing posts</li>
+                </ul>
+                <p><em>Note: Since this funding arrived late in the month (June 27), its full impact will be realized in July.</em></p>
+            </div>
+        </section>
+        
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h2 class="section-title">June Performance Highlights</h2>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fab fa-facebook"></i>
+                    <div class="stat-value">67.2K</div>
+                    <div class="stat-label">Total Reach</div>
+                    <div class="trend-up">▲ Combined</div>
+                </div>
+                
+                <div class="stat-card">
+                    <i class="fab fa-tiktok"></i>
+                    <div class="stat-value">22K</div>
+                    <div class="stat-label">Video Views</div>
+                    <div class="trend-up">▲ Combined</div>
+                </div>
+                
+                <div class="stat-card">
+                    <i class="fab fa-instagram"></i>
+                    <div class="stat-value">21.1K</div>
+                    <div class="stat-label">Content Views</div>
+                    <div class="trend-up">▲ Combined</div>
+                </div>
+                
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <div class="stat-value">740</div>
+                    <div class="stat-label">New Followers</div>
+                    <div class="trend-up">▲ Combined</div>
+                </div>
+            </div>
+            
+            <div class="highlight">
+                <h3>Key Growth Insights</h3>
+                <ul style="margin-left: 20px;">
+                    <li><strong>Facebook</strong> continues to drive massive reach but needs conversion optimization</li>
+                    <li><strong>Instagram</strong> shows the most balanced growth across all metrics</li>
+                    <li><strong>LinkedIn</strong> has transformed from our weakest to fastest-growing platform</li>
+                    <li><strong>TikTok</strong> delivers explosive growth, especially for HPT which launched effectively</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <h2 class="section-title">Facebook Performance</h2>
+            </div>
+            
+            <div class="branches">
+                <div class="branch-card">
+                    <h3>HPC (Main Branch)</h3>
+                    <div class="insights">
+                        <div class="insight">
+                            <div class="insight-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div class="insight-content">
+                                <h4>Massive Reach Growth</h4>
+                                <p>37,279 views (↑78%) showing strong content discovery</p>
+                            </div>
+                        </div>
+                        
+                        <div class="insight">
+                            <div class="insight-icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <div class="insight-content">
+                                <h4>Engagement Challenge</h4>
+                                <p>81 interactions (↓61.4%) indicating content is reaching but not converting viewers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="branch-card">
+                    <h3>HPT (Tuuti Branch)</h3>
+                    <div class="insights">
+                        <div class="insight">
+                            <div class="insight-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="insight-content">
+                                <h4>Balanced Growth</h4>
+                                <p>29,936 views (↑22.1%) with 194 interactions (↑20.5%) showing healthy engagement</p>
+                            </div>
+                        </div>
+                        
+                        <div class="insight">
+                            <div class="insight-icon">
+                                <i class="fas fa-link"></i>
+                            </div>
+                            <div class="insight-content">
+                                <h4>Conversion Strength</h4>
+                                <p>586 visits (↑55.9%) and 21 follows (↑61.5%) demonstrate effective CTAs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="highlight">
+                <h3>Facebook Strategy Insight</h3>
+                <p>HPT shows the healthiest growth pattern with all metrics moving together. For HPC, we need to focus on converting reach into engagement through more interactive content and stronger calls-to-action.</p>
+            </div>
+        </section>
+        
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <h2 class="section-title">Instagram Performance</h2>
+            </div>
+            
+            <div class="branches">
+                <div class="branch-card">
+                    <h3>HPC (Main Branch)</h3>
+                    <div class="insights">
+                        <div class="insight">
+                            <div class="insight-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="insight-content">
+                                <h4>Follower Growth Leader</h4>
+                                <p>72 new followers (↑63.6%) - our strongest platform for audience building</p>
+                            </div>
+                        </div>
+                        
+                        <div class="insight">
+                            <div class="insight-icon">
+                                <i class="fas fa-hand-pointer"></i>
+                            </div>
+                            <div class="insight-content">
+                                <h4>High Intent Traffic</h4>
+                                <p>690 profile visits (↑95.5%) showing strong brand interest from viewers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="branch-card">
+                    <h3>HPT (Tuuti Branch)</h3>
+                    <div class="insights">
+                        <div class="insight">
+                            <div class="insight-icon">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <div class="insight-content">
+                                <h4>Engagement Explosion</h4>
+                                <p>84 interactions (↑200%) and 249 link clicks (↑100%) indicate highly effective content</p>
+                            </div>
+                        </div>
+                        
+                        <div class="insight">
+                            <div class="insight-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div class="insight-content">
+                                <h4>Critical Threshold</h4>
+                                <p>Currently below 100 followers - breaking this barrier will unlock analytics tools and targeting capabilities</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="highlight">
+                <h3>Instagram Growth Strategy</h3>
+                <p>HPC should capitalize on its strong follower growth with exclusive offers. HPT needs a focused campaign to break the 100-follower barrier through giveaways and local influencer collaborations.</p>
+            </div>
+        </section>
+        
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+                <h2 class="section-title">LinkedIn Performance</h2>
+            </div>
+            
+            <div class="branches">
+                <div class="branch-card">
+                    <h3>HPC (Main Branch)</h3>
+                    <div class="insights">
+                        <div class="insight">
+                            <div class="insight-icon">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div class="insight-content">
+                                <h4>Corporate Appeal Growing</h4>
+                                <p>628 impressions (↑13%) and 26 reactions (↑116.7%) show B2B content gaining traction</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="branch-card">
+                    <h3>HPT (Tuuti Branch)</h3>
+                    <div class="insights">
+                        <div class="insight">
+                            <div class="insight-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="insight-content">
+                                <h4>Breakout Performance</h4>
+                                <p>373 impressions (↑62.2%) - our fastest-growing channel this month</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="highlight">
+                <h3>LinkedIn Opportunity</h3>
+                <p>Both locations show tremendous potential on LinkedIn. We should focus on B2B content highlighting corporate retreat packages, team-building activities, and industry partnerships to convert visibility into leads.</p>
+            </div>
+        </section>
+        
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fab fa-tiktok"></i>
+                </div>
+                <h2 class="section-title">TikTok Performance</h2>
+            </div>
+            
+            <div class="branches">
+                <div class="branch-card">
+                    <h3>HPC (Main Branch)</h3>
+                    <div class="insights">
+                        <div class="insight">
+                            <div class="insight-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="insight-content">
+                                <h4>Algorithm Advantage</h4>
+                                <p>16,267 views (↑26.69%) showing strong content discoverability</p>
+                            </div>
+                        </div>
+                        
+                        <div class="insight">
+                            <div class="insight-icon">
+                                <i class="fas fa-user-friends"></i>
+                            </div>
+                            <div class="insight-content">
+                                <h4>Conversion Challenge</h4>
+                                <p>193 profile views (↓6.45%) indicate need for stronger CTAs to build community</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="branch-card">
+                    <h3>HPT (Tuuti Branch)</h3>
+                    <div class="insights">
+                        <div class="insight">
+                            <div class="insight-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div class="insight-content">
+                                <h4>Explosive Launch</h4>
+                                <p>5,827 views (from near zero) and 200 likes (↑669.23%) - outstanding platform debut</p>
+                            </div>
+                        </div>
+                        
+                        <div class="insight">
+                            <div class="insight-icon">
+                                <i class="fas fa-exchange-alt"></i>
+                            </div>
+                            <div class="insight-content">
+                                <h4>Conversion Excellence</h4>
+                                <p>91% conversion rate from profile views to followers shows highly resonant content</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="highlight">
+                <h3>TikTok Strategy Insight</h3>
+                <p>HPT has demonstrated an exceptionally successful TikTok launch. We should replicate this approach with HPC through more localized content, interactive elements, and clear follower incentives.</p>
+            </div>
+        </section>
+        
+        <section class="section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h2 class="section-title">July Action Plan</h2>
+            </div>
+            
+            <div class="initiatives-grid">
+                <div class="initiative-card">
+                    <h3><i class="fas fa-tools"></i> Resource Deployment</h3>
+                    <p>With KES 39,000 received on June 27, we'll strategically deploy funds in July:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Metricool for scheduling and analytics</li>
+                        <li>Adobe Creative Suite for professional content</li>
+                        <li>Boost top-performing posts from June</li>
+                    </ul>
+                    <div class="progress-bar">
+                        <div class="progress progress-25"></div>
+                    </div>
+                    <div class="timeline">
+                        <span>Funds Received</span>
+                        <span>June 27</span>
+                    </div>
+                </div>
+                
+                <div class="initiative-card">
+                    <h3><i class="fas fa-bullseye"></i> Conversion Optimization</h3>
+                    <p>Focus on turning reach into bookings:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Facebook: "First-Time Guest" offers</li>
+                        <li>Instagram: Swipe-up booking links</li>
+                        <li>TikTok: Exclusive discount codes</li>
+                    </ul>
+                    <div class="progress-bar">
+                        <div class="progress progress-50"></div>
+                    </div>
+                    <div class="timeline">
+                        <span>Strategy Ready</span>
+                        <span>July 5</span>
+                    </div>
+                </div>
+                
+                <div class="initiative-card">
+                    <h3><i class="fas fa-users"></i> Team Development</h3>
+                    <p>Leverage our new team structure:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Weekly creative sessions with Corretta</li>
+                        <li>Cross-department content ideas</li>
+                        <li>Staff spotlight series development</li>
+                    </ul>
+                    <div class="progress-bar">
+                        <div class="progress progress-75"></div>
+                    </div>
+                    <div class="timeline">
+                        <span>In Progress</span>
+                        <span>Ongoing</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="thank-you">
+                <h3>Special Thanks to Management</h3>
+                <p>We appreciate the support in securing essential resources and creating a positive work environment. The Father's Day soccer event was particularly valuable for team morale and relationship building. We look forward to implementing these resources in July to drive even better results.</p>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo-center">
+                    <div style="background-color: #a95631; width: 100px; height: 40px; border-radius: 5px; display: flex; align-items: center; justify-content: center;">
+                        <span style="color: white; font-weight: bold;">HUNTERS PARADISE</span>
+                    </div>
+                </div>
+                <div class="prepared-by">Report prepared by: Jackson Munene</div>
+                <div class="role">Digital and E-commerce Intern, Hunters Paradise</div>
+                <p style="margin-top: 15px; opacity: 0.7; font-size: 14px;">© 2025 Hunters Paradise. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
